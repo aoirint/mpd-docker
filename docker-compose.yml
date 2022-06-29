@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  mpd:
+    build: .
+    # image: aoirint/mpd:latest
+    restart: always
+    ports:
+      - '${HOST_MPD_PORT}:6600'
+      - '${HOST_HTTP_PORT}:8000'
+    environment:
+      MPD_PASSWORD: ${MPD_PASSWORD}
+    volumes:
+      - './data/music:/var/lib/mpd/music'
+      - './data/playlists:/var/lib/mpd/playlists'
+      - './data/log:/var/log/mpd'

@@ -13,6 +13,8 @@
 
 ## Volumes
 
+User:Group=102:29
+
 - Music directory: /var/lib/mpd/music
 - Playlist directory: /var/lib/mpd/playlists
 - Log: /var/log/mpd
