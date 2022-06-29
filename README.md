@@ -1,6 +1,6 @@
 # mpd-docker
 
-- Repository: <https://github.com/aoirint/mpd-docker/>
+- Repository: <https://github.com/aoirint/mpd-docker>
 - Docker Hub: <https://hub.docker.com/r/aoirint/mpd>
 
 ## Environment variables
