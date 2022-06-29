@@ -32,8 +32,8 @@ MPD (Music player daemon) Docker image
 
 ## Volumes
 
-User:Group=102:29
+User:Group=HOST_UID:HOST_GID
 
-- Music directory: /var/lib/mpd/music
-- Playlist directory: /var/lib/mpd/playlists
-- Log: /var/log/mpd
+- Music directory: /mpd/music
+- Playlist directory: /mpd/playlists
+- Log: /mpd/log
