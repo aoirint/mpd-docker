@@ -5,6 +5,11 @@ MPD (Music player daemon) Docker image
 - Repository: <https://github.com/aoirint/mpd-docker>
 - Docker Hub: <https://hub.docker.com/r/aoirint/mpd>
 
+## Outputs
+
+- PulseAudio (Host general user deamon)
+- HTTP
+
 ## Environment variables
 
 |key|example|
