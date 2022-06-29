@@ -4,14 +4,19 @@ services:
     build: .
     # image: aoirint/mpd:latest
     restart: always
+    group_add:
+      - '${HOST_AUDIO_GROUP}'
     ports:
       - '${HOST_MPD_PORT}:6600'
       - '${HOST_HTTP_PORT}:8000'
-    group_add:
-      - ${HOST_AUDIO_GROUP}
     environment:
+      PULSE_SERVER: ${PULSE_SERVER}
+      HOST_UID: ${HOST_UID}
+      HOST_GID: ${HOST_GID}
       MPD_PASSWORD: ${MPD_PASSWORD}
     volumes:
-      - './data/music:/var/lib/mpd/music'
-      - './data/playlists:/var/lib/mpd/playlists'
-      - './data/log:/var/log/mpd'
+      - '${HOST_PULSE_NATIVE_FILE}:${HOST_PULSE_NATIVE_FILE}'
+      - '${HOST_PULSE_COOKIE_FILE}:/pulseaudio/cookie'
+      - './data/music:/mpd/music'
+      - './data/playlists:/playlists'
+      - './data/log:/mpd/log'
