@@ -13,6 +13,9 @@ RUN apt-get update && \
 
 RUN useradd -m -u 1000 -o user
 
+RUN mkdir /run/mpd && \
+    chown -R 102:29 /run/mpd
+
 ADD ./mpd.conf /etc/mpd.conf.template
 
 ADD ./entrypoint.sh /
