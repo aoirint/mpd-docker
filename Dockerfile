@@ -6,6 +6,7 @@ ENV MPD_PASSWORD=password@read,add,control,admin
 RUN apt-get update && \
     apt-get install -y \
         mpd \
+        gettext-base \
         gosu && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
