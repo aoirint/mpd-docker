@@ -9,7 +9,21 @@ MPD (Music player daemon) Docker image
 
 |key|example|
 |:--|:--|
+|HOST_MPD_PORT|`127.0.0.1:6600`|
+|HOST_HTTP_PORT|`127.0.0.1:8000`|
+|PULSE_SERVER|`unix:/run/user/1000/pulse/native`|
+|HOST_AUDIO_GROUP|`audio`|
+|HOST_UID|`1000`|
+|HOST_GID|`1000`|
+|HOST_PULSE_NATIVE_FILE|`/run/user/1000/pulse/native`|
+|HOST_PULSE_COOKIE_FILE|`/home/user/.config/pulse/cookie`|
 |MPD_PASSWORD|`password@read,add,control,admin`|
+
+- HOST_AUDIO_GROUP: `getent group audio | cut -d: -f3`
+- HOST_UID: `id -u`
+- HOST_GID: `id -g`
+- `/run/user/1000`: `echo ${XDG_RUNTIME_DIR}`
+- `/home/user`: `echo ${HOME}`
 
 ## Ports
 
