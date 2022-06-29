@@ -1,5 +1,5 @@
 #!/bin/bash
 
-envsubst '${MPD_PASSWORD}' < /etc/mpd.conf > /etc/mpd.conf
+envsubst '${MPD_PASSWORD}' < /etc/mpd.conf.template > /etc/mpd.conf
 
 exec $@

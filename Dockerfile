@@ -13,7 +13,7 @@ RUN apt-get update && \
 
 RUN useradd -m -u 1000 -o user
 
-ADD ./mpd.conf /etc/mpd.conf
+ADD ./mpd.conf /etc/mpd.conf.template
 
 ADD ./entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]
